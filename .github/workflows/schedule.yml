@@ -2,8 +2,8 @@ name: VGTK Schedule
 
 on:
   schedule:
-    - cron: '0 12 * * *'  # Запуск в 15:00 по Минску (12:00 UTC)
-  workflow_dispatch:  # Позволяет запускать вручную
+    - cron: '0 12 * * *'
+  workflow_dispatch:
 
 jobs:
   run-schedule:
