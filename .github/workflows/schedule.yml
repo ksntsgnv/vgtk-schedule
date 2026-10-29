@@ -1,0 +1,26 @@
+name: VGTK Schedule
+
+on:
+  schedule:
+    - cron: '0 12 * * *'  # Запуск в 15:00 по Минску (12:00 UTC)
+  workflow_dispatch:  # Позволяет запускать вручную
+
+jobs:
+  run-schedule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4
+      
+      - name: Run schedule script
+        run: python my_schedule.py
