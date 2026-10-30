@@ -14,8 +14,9 @@ MY_SUBJECTS = {
 }
 CURATOR_HOUR_GROUP = "ПСР-11"
 
-TELEGRAM_BOT_TOKEN = "9133871343:AAGTRsWdEHasEPbpD4W5kn_jJtJt7Dj3gQA"
-TELEGRAM_CHAT_ID = "1542128677"
+import os
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
+TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
 
 urls = {"Завтра": "https://www.vgtk.by/schedule/lessons/day-tomorrow.php"}
 MONTHS = {"января": "01", "февраля": "02", "марта": "03", "апреля": "04", "мая": "05", "июня": "06",
