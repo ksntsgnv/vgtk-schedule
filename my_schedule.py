@@ -17,6 +17,12 @@ CURATOR_HOUR_GROUP = "ПСР-11"
 import os
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
+print("=" * 50)
+print(f"Токен (первые 30 символов): {str(TELEGRAM_BOT_TOKEN)[:30]}")
+print(f"Chat ID: {TELEGRAM_CHAT_ID}")
+print(f"Токен есть? {bool(TELEGRAM_BOT_TOKEN)}")
+print(f"Chat ID есть? {bool(TELEGRAM_CHAT_ID)}")
+print("=" * 50)
 
 urls = {"Завтра": "https://www.vgtk.by/schedule/lessons/day-tomorrow.php"}
 MONTHS = {"января": "01", "февраля": "02", "марта": "03", "апреля": "04", "мая": "05", "июня": "06",
