@@ -28,7 +28,7 @@ seen_lessons = set()
 print("⏳ Загружаю расписание...")
 
 for day_name, url in urls.items():
-    response = requests.get(url)
+    response = requests.get(url, timeout=30)
     response.encoding = 'utf-8'
     soup = BeautifulSoup(response.text, 'html.parser')
     
